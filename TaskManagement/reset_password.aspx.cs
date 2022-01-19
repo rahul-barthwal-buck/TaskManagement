@@ -101,8 +101,8 @@ namespace TaskManagement
                     sqlCommand.Parameters.AddWithValue("@Email", null);
                     sqlCommand.Parameters.AddWithValue("@UserId", Uid);
 
-                    int result = Convert.ToInt32(sqlCommand.ExecuteNonQuery());
-                    if (result > 0)
+                    int resultChangePassword = Convert.ToInt32(sqlCommand.ExecuteNonQuery());
+                    if (resultChangePassword > 0)
                     {
                         CloseConnection();
 

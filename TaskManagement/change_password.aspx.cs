@@ -80,8 +80,8 @@ namespace TaskManagement
                     sqlCommand.Parameters.AddWithValue("@OldPassword", user.Password);
                     sqlCommand.Parameters.AddWithValue("@NewPassword", null);
                     sqlCommand.Parameters.AddWithValue("@UserId", userId);
-                    int result = Convert.ToInt32(sqlCommand.ExecuteScalar().ToString());
-                    if (result == 1)
+                    int resultCheckPassword = Convert.ToInt32(sqlCommand.ExecuteScalar().ToString());
+                    if (resultCheckPassword == 1)
                     {
                         CloseConnection();
 

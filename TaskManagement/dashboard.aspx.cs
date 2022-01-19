@@ -189,8 +189,8 @@ namespace TaskManagement
                     sqlCommand.Parameters.AddWithValue("@Event", "CheckTask");
                     sqlCommand.Parameters.AddWithValue("@TaskName", task.TaskName);
                     sqlCommand.Parameters.AddWithValue("@UserId", userId);
-                    int result = Convert.ToInt32(sqlCommand.ExecuteScalar().ToString());
-                    if (result == 1)
+                    int resultCheckTask = Convert.ToInt32(sqlCommand.ExecuteScalar().ToString());
+                    if (resultCheckTask == 1)
                     {
                         Response.Write("<script>alert('Task Already exist! Enter Some other task');</script>");
                     }
@@ -206,8 +206,8 @@ namespace TaskManagement
                         sqlCommand.Parameters.AddWithValue("@Event", "Add");
                         sqlCommand.Parameters.AddWithValue("@TaskName", task.TaskName);
                         sqlCommand.Parameters.AddWithValue("@UserId", userId);
-                        int resultInsert = Convert.ToInt32(sqlCommand.ExecuteNonQuery());
-                        if (resultInsert > 0)
+                        int resultInsertTask = Convert.ToInt32(sqlCommand.ExecuteNonQuery());
+                        if (resultInsertTask > 0)
                         {
                             Response.Write("<script>alert('Task inserted successfully...');</script>");
                             BindTaskDetails();
@@ -277,8 +277,8 @@ namespace TaskManagement
                     sqlCommand.Parameters.AddWithValue("@TaskName", task.TaskName);
                     sqlCommand.Parameters.AddWithValue("@TaskId",Session["TaskId"]);
                     sqlCommand.Parameters.AddWithValue("@UserId", userId);
-                    int result = Convert.ToInt32(sqlCommand.ExecuteNonQuery());
-                    if (result > 0)
+                    int resultUpdateTask = Convert.ToInt32(sqlCommand.ExecuteNonQuery());
+                    if (resultUpdateTask > 0)
                     {
                         Response.Write("<script>alert('Task updated successfully...');</script>");
                         GridView1.EditIndex = -1;
@@ -329,8 +329,8 @@ namespace TaskManagement
                 sqlCommand.Parameters.AddWithValue("@TaskId", Convert.ToInt32(id.Text));
                 sqlCommand.Parameters.AddWithValue("@UserId", userId);
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                int result = Convert.ToInt32(sqlCommand.ExecuteNonQuery());
-                if (result > 0)
+                int resultDeleteTask = Convert.ToInt32(sqlCommand.ExecuteNonQuery());
+                if (resultDeleteTask > 0)
                 {
 
                     Response.Write("<script>alert('Task deleted successfully...');</script>");

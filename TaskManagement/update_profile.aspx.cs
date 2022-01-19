@@ -150,8 +150,8 @@ namespace TaskManagement
                                     sqlCommand.Parameters.AddWithValue("@LastName", user.LastName);
                                     sqlCommand.Parameters.AddWithValue("@ProfileImage", user.ProfileImage);
                                     sqlCommand.Parameters.AddWithValue("@UserId", userId);
-                                    int result = Convert.ToInt32(sqlCommand.ExecuteNonQuery());
-                                    if (result > 0)
+                                    int resultUpdatedProfile = Convert.ToInt32(sqlCommand.ExecuteNonQuery());
+                                    if (resultUpdatedProfile > 0)
                                     {
                                         //Server.MapPath will return the physical path for a given virtual path
                                         //If Profile updating into the database table then deleting the Old file by File which present in System.IO

@@ -63,8 +63,8 @@ namespace TaskManagement
                     sqlCommand.Parameters.AddWithValue("@Event", "CheckEmail");
                     sqlCommand.Parameters.AddWithValue("@Email", user.EmailAddress);
                     sqlCommand.Parameters.AddWithValue("@Password", null);
-                    int result = Convert.ToInt32(sqlCommand.ExecuteScalar().ToString());
-                    if (result == 1)
+                    int resultCheckEmail = Convert.ToInt32(sqlCommand.ExecuteScalar().ToString());
+                    if (resultCheckEmail == 1)
                     {
                         CloseConnection();
 

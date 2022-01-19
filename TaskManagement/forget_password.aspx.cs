@@ -86,8 +86,8 @@ namespace TaskManagement
                         sqlCommand.Parameters.AddWithValue("@Event", "InsertForgetPassRequest");
                         sqlCommand.Parameters.AddWithValue("@MyGUID", myGUID);
                         sqlCommand.Parameters.AddWithValue("@UserId", Uid);
-                        int result = Convert.ToInt32(sqlCommand.ExecuteNonQuery());
-                        if (result > 0)
+                        int resultForgetPassRequest = Convert.ToInt32(sqlCommand.ExecuteNonQuery());
+                        if (resultForgetPassRequest > 0)
                         {
                             //If request stored then sending Reset link to user email address
                             try

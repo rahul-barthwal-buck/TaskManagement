@@ -125,8 +125,8 @@ namespace TaskManagement
                                         sqlCommand.Parameters.AddWithValue("@ProfileImage", user.ProfileImage);
                                         sqlCommand.Parameters.AddWithValue("@Email", user.EmailAddress);
                                         sqlCommand.Parameters.AddWithValue("@Password", user.Password);
-                                        int result = Convert.ToInt32(sqlCommand.ExecuteNonQuery());
-                                        if (result > 0)
+                                        int resultRegisterUser = Convert.ToInt32(sqlCommand.ExecuteNonQuery());
+                                        if (resultRegisterUser > 0)
                                         {
 
                                             ProfileUpload.SaveAs(Server.MapPath("~/UserImages/")+imgNo+imageFileName);
