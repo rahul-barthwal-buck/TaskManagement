@@ -1,0 +1,35 @@
+﻿.LoginTable, .ForgetTable, .RegisterTable {
+    width: 500px;
+}
+
+.LoginTable tbody tr td, .ForgetTable tbody tr td, .RegisterTable tbody tr td {
+    width: 200px;
+}
+
+.LoginValidation, .ForgetValidation, .RegisterValidation {
+    width: 500px;
+}
+.ProfileUpload{
+    margin-left:100px;
+}
+
+.NavElement{
+    margin-left: 400px;
+}
+
+.hiddenId {
+    display: none;
+}
+
+.InsertUpdate {
+    width: 500px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+    a:hover {
+        color: brown;
+    }
