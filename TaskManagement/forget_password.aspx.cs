@@ -59,7 +59,7 @@ namespace TaskManagement
                     User user = new User();
                     user.EmailAddress = txtEmail.Text.Trim();
                     //Here First check whether the Email entered is exist or not
-                    //if not exist then print message to the user
+                    //if exist then print message to the user
                     sqlCommand.CommandText = "sp_ForgetPassword";
                     sqlCommand.CommandType = CommandType.StoredProcedure;
                     sqlCommand.Parameters.AddWithValue("@Event", "CheckEmail");
